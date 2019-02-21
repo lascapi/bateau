@@ -34,7 +34,7 @@ public class BateauServlet extends HttpServlet {
 			throws ServletException, IOException {
 		List<String> bateaux = BateauRepo.findAll();
 		response.getWriter()
-			.append("<a href='../>⬆</a>'")
+			.append("<div><a href='/bateau/'>up</a></div>")
 			.append("<div><h2>Bateau(x)</h2> ")
 			.append(bateaux.toString())
 			.append("</div>");
