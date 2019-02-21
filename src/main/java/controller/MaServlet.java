@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import data.Bateau;
 import repository.BateauRepo;
 
 /**
@@ -38,7 +37,7 @@ public class MaServlet extends HttpServlet {
 		response.getWriter()
 			.append("<div>Horloge parlante : ")
 			.append(heure.toString())
-			.append("</div><div>Bateaux : ")
+			.append("</div><div>Bateau(x) : ")
 			.append(bateaux.toString())
 			.append("</div>");
 	}

@@ -7,32 +7,27 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.Properties;
 
 import javax.sql.DataSource;
 
-import org.mariadb.jdbc.MySQLDataSource;
-
 import com.mysql.cj.jdbc.MysqlDataSource;
-
-
-
 
 public class BateauRepo {
 	
 	
-	private static final String url =
-			"jdbc:mysql://localhost:3306/bateau?serverTimezone=Europe/Paris";
-	private static final String user = "bat";
-	private static final String password = "password";
-	
+//	private static final String SQL_DSN =
+//			"jdbc:mysql://localhost:3306/bateau?serverTimezone=Europe/Paris";
+//	private static final String user = "bat";
+//	private static final String password = "password";
+//	
 	
 	private static DataSource initDataSource() {
-		//MySQLDataSource ds = new MySQLDataSource();
+		System.out.println("=====initDataSource");
 		MysqlDataSource ds = new MysqlDataSource();
+		System.out.println("dataSource = " + ds.toString());
 		try (
 			InputStream is = BateauRepo.class.getResourceAsStream("/config.properties");
 		) {
@@ -43,11 +38,11 @@ public class BateauRepo {
 			ds.setUrl(props.getProperty("database.url"));
 			ds.setUser(props.getProperty("database.user"));
 			ds.setPassword(props.getProperty("database.password"));
-//			ds.setUrl(url);
-//			ds.setUser(user);
-//			ds.setPassword(password);
+			System.out.println(ds.toString());
+			//ds.setUrl(SQL_DSN);
+			//ds.setUser(user);
+			//ds.setPassword(password);
 		} catch (IOException e) {
-			//throw new 
 			System.err.println("Error reading configuration file: " + e.getMessage());
 		}
 		return ds;

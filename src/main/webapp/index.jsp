@@ -1,3 +1,5 @@
+<%@page import="controller.MaServlet"%>
+<%@page import="data.Bateau"%>
 <%@page import="java.time.LocalTime"%>
 <%@page import="java.time.LocalDate"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -6,15 +8,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>bateau</title>
 </head>
 <body>
 
 <div>
-	<%= LocalDate.now()%>
+	date : <%= LocalDate.now()%>
 </div>
 <div>
-	<%= LocalTime.now() %>
+	heure : <%= LocalTime.now() %>
 </div>
 </body>
 </html>
