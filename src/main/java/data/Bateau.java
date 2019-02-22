@@ -1,8 +1,8 @@
 package data;
 
 /**
- * un super commentaire avec des éééé et des ààà
- * 辣手神探
+ * un super commentaire avec des éééé et des ààà 辣手神探
+ * 
  * @author Administrateur
  *
  */
@@ -29,7 +29,7 @@ public class Bateau {
 
 	@Override
 	public String toString() {
-		return " \\" + nom + "/  TOoooott";
+		return "Nom du bateau = " + nom + "\\____/  TOoooott"; 
 	}
 
 }
