@@ -13,10 +13,10 @@
 <body>
 	<h1>Hello World</h1>
 	<div>
-		<a href="/heure">Horloge</a>
+		<a href="/bateau/heure">Horloge</a>
 	</div>
 	<div>
-		<a href="/bateau">Bateau(x)</a>
+		<a href="/bateau/bateaux">Bateau(x)</a>
 	</div>
 	<div>
 		date :

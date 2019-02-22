@@ -1,18 +1,20 @@
 package controller;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import data.Bateau;
+import repository.BateauRepo;
 
 /**
  * Servlet implementation class BateauServlet
  */
-@WebServlet("/bateau")
+@WebServlet("/bateaux")
 public class BateauServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -30,8 +32,11 @@ public class BateauServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		Bateau bateau = new Bateau("Queen's Mary Revenge");
-		response.getWriter().append("Bateau de barbe noire : ").append(bateau.toString());
+		List<String> bateaux = BateauRepo.findAll();
+		response.getWriter()
+			.append("<div><h2>Bateau(x)</h2> ")
+			.append(bateaux.toString())
+			.append("</div>");
 	}
 
 	/**

@@ -2,15 +2,12 @@ package controller;
 
 import java.io.IOException;
 import java.time.LocalTime;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import repository.BateauRepo;
 
 /**
  * Servlet implementation class MaServlet
@@ -32,12 +29,8 @@ public class MaServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		LocalTime heure = LocalTime.now();
-		//Bateau bat = new Bateau("Titanic");
-		List<String> bateaux = BateauRepo.findAll();
 		response.getWriter()
-			.append("<div><h2>Bateau(x)</h2> ")
-			.append(bateaux.toString())
-			.append("</div><div>Horloge parlante : ")
+			.append("<h2>Horloge parlante</h2><div>")
 			.append(heure.toString())
 			.append("</div>");
 	}
