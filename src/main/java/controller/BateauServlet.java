@@ -33,10 +33,15 @@ public class BateauServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		List<String> bateaux = BateauRepo.findAll();
+		String listeDeBateau = "<ul>";
+		for (String bateau : bateaux) {
+			listeDeBateau = listeDeBateau + "<li>" + bateau + "</li>";
+		}
+		listeDeBateau = listeDeBateau + "</ul>";
 		response.getWriter()
 			.append("<div><a href='/bateau/'>up</a></div>")
 			.append("<div><h2>Bateau(x)</h2> ")
-			.append(bateaux.toString())
+			.append(listeDeBateau)
 			.append("</div>");
 	}
 
