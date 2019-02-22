@@ -31,7 +31,7 @@ public class HelloWorldServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		response.getWriter()
-			.append("<h1>Hello World</h1><p>hello world</p>");
+			.append("<h1>Hello World</h1><p>hello world</p><hr><p>bottom of the page</p>");
 	}
 
 	/**
