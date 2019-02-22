@@ -29,7 +29,7 @@ public class Bateau {
 
 	@Override
 	public String toString() {
-		return "Bateau [nom=" + nom + "]";
+		return "Nom du bateau = " + nom + "\\____/";
 	}
 
 }
