@@ -30,6 +30,7 @@ public class MaServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		LocalTime heure = LocalTime.now();
 		response.getWriter()
+			.append("<a href='../>⬆</a>'")
 			.append("<h2>Horloge parlante</h2><div>")
 			.append(heure.toString())
 			.append("</div>");
