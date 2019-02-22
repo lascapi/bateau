@@ -25,7 +25,6 @@ public class BateauRepo {
 //	
 	
 	private static DataSource initDataSource() {
-		System.out.println("=====initDataSource");
 		MysqlDataSource ds = new MysqlDataSource();
 		System.out.println("dataSource = " + ds.toString());
 		try (

@@ -12,7 +12,7 @@ import data.Bateau;
 /**
  * Servlet implementation class BateauServlet
  */
-@WebServlet("/BateauServlet")
+@WebServlet("/bateau")
 public class BateauServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
