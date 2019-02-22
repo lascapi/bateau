@@ -30,8 +30,8 @@ public class HelloWorldServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		response.getWriter()
-			.append("<h1>Hello World</h1><p>hello world</p><hr><p>bottom of the page</p>");
+		response.getWriter().append("<a href='/bateau/'>up</a>")
+				.append("<h1>Hello World</h1><p>hello world</p><hr><p>bottom of the page</p>");
 	}
 
 	/**
