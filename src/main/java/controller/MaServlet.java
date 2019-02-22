@@ -35,10 +35,10 @@ public class MaServlet extends HttpServlet {
 		//Bateau bat = new Bateau("Titanic");
 		List<String> bateaux = BateauRepo.findAll();
 		response.getWriter()
-			.append("<div>Horloge parlante : ")
-			.append(heure.toString())
-			.append("</div><div>Bateau(x) : ")
+			.append("<div><h2>Bateau(x)</h2> ")
 			.append(bateaux.toString())
+			.append("</div><div>Horloge parlante : ")
+			.append(heure.toString())
 			.append("</div>");
 	}
 
