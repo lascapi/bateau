@@ -18,6 +18,9 @@
 	<div>
 		<a href="/bateau/bateaux">Bateau(x)</a>
 	</div>
+	<div>
+		<a href="/bateau/helloworld">Hello World</a>
+	</div>
 	<hr>
 	<div>
 		<%=LocalDate.now()%>
