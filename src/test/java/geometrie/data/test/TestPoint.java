@@ -2,10 +2,10 @@ package geometrie.data.test;
 
 import org.junit.Test;
 
-class TestPoint {
+public class TestPoint {
 	
 	@Test
-	void test() {
+	public void test() {
 		
 	}
 
