@@ -1,5 +1,12 @@
 package geometrie.data.test;
 
-public class TestPoint {
+import org.junit.Test;
+
+class TestPoint {
+	
+	@Test
+	void test() {
+		
+	}
 
 }
